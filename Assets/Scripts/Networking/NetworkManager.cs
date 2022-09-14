@@ -18,7 +18,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 	public static event Action OnPlayersChanged;
 
 	private const string Key = "CHAIR_INDEX";
-	private string room = "VRMeetup";
+	private string room = "Meetup";
 	private string gameVersion = "0.1";
 
 	private bool m_createdRoom = false;
@@ -97,54 +97,18 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 	}
 
 
-	private int GiveMeANumber(GameObject[] enumerable, string excludes)
-	{
-		if (!string.IsNullOrEmpty(excludes))
-		{
-			var exclude = excludes.Split(',').Select(x => int.Parse(x)).ToHashSet();
-			var range = Enumerable.Range(0, enumerable.Count()).Where((i) => exclude.Contains(i));
-
-			var rand = new System.Random();
-			int index = rand.Next(0, enumerable.Count() - exclude.Count);
-			return range.ElementAt(index);
-		}
-		else
-		{
-			var range = Enumerable.Range(0, enumerable.Count());
-
-			var rand = new System.Random();
-			int index = rand.Next(0, enumerable.Count());
-			return range.ElementAt(index);
-		}
-	}
-
 	public void CreatePlayer()
 	{
 		if (PhotonNetwork.IsMasterClient)
 		{
-			PhotonNetwork.Instantiate("Person", GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.position, GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.localRotation, 0);
+			PhotonNetwork.Instantiate("Noureddine", GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.position, GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.localRotation, 0);
 		}
 		else
 		{
 			var chairs = GameObject.FindGameObjectsWithTag("chair");
-			int chairIndex;
-			if (PlayerPrefs.HasKey(Key))
-			{
-				string keys = PlayerPrefs.GetString(Key);
-				chairIndex = GiveMeANumber(chairs, Key);
-				keys = keys + ',' + chairIndex;
-				PlayerPrefs.SetString(Key, keys);
-
-			}
-			else
-			{
-				chairIndex = GiveMeANumber(chairs,"");
-				string keys = chairIndex.ToString();
-				PlayerPrefs.SetString(Key, keys);
-			}
 
 
-			PhotonNetwork.Instantiate("Person", chairs[chairIndex].transform.position, chairs[chairIndex].transform.localRotation, 0);
+			PhotonNetwork.Instantiate("Noureddine", chairs[PhotonNetwork.CountOfPlayers].transform.position, chairs[PhotonNetwork.CountOfPlayers].transform.localRotation, 0);
 		}
 
 
