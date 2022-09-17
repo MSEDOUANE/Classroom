@@ -101,7 +101,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 	{
 		if (PhotonNetwork.IsMasterClient)
 		{
-			PhotonNetwork.Instantiate("Noureddine", GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.position, GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.localRotation, 0);
+			PhotonNetwork.Instantiate(PlayerPrefs.GetString("CharacterSelectedName"), GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.position, GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.localRotation, 0);
 		}
 		else
 		{
