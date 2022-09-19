@@ -101,14 +101,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 	{
 		if (PhotonNetwork.IsMasterClient)
 		{
-			PhotonNetwork.Instantiate(PlayerPrefs.GetString("CharacterSelectedName"), GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.position, GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.localRotation, 0);
+			Quaternion rot = new (0f, 143.366f,0f,0f) ;
+			PhotonNetwork.Instantiate(PlayerPrefs.GetString("CharacterSelectedName"), GameObject.FindGameObjectsWithTag("Teacher chair")[0].transform.position, rot, 0);
 		}
 		else
 		{
 			var chairs = GameObject.FindGameObjectsWithTag("chair");
 
 
-			PhotonNetwork.Instantiate("Noureddine", chairs[PhotonNetwork.CountOfPlayers].transform.position, chairs[PhotonNetwork.CountOfPlayers].transform.localRotation, 0);
+			PhotonNetwork.Instantiate(PlayerPrefs.GetString("CharacterSelectedName"), chairs[PhotonNetwork.CountOfPlayers].transform.position, chairs[PhotonNetwork.CountOfPlayers].transform.localRotation, 0);
 		}
 
 

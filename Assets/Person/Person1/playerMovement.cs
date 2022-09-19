@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Voice.PUN;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,15 +32,21 @@ public class playerMovement : MonoBehaviour
 		anim = GetComponent<Animator>();
 		photonView = GetComponent<PhotonView>();
 		isClassroomScene = SceneManager.GetActiveScene().name == "SampleScene";
+
+
+		Camera camera = this.GetComponentInChildren<Camera>(true);
+		AudioListener audioListener = this.GetComponentInChildren<AudioListener>(true);
 		if (isClassroomScene && photonView.IsMine)
 		{
-			Camera camera = this.GetComponentInChildren<Camera>(true);
+
 			camera.enabled = true;
+			audioListener.enabled = true;
 		}
 		else if(isClassroomScene)
 		{
-			Camera camera = this.GetComponentInChildren<Camera>(true);
 			camera.enabled = false;
+			audioListener.enabled = true;
+
 		}
 	}
 
