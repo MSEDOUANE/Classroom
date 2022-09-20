@@ -45,7 +45,7 @@ public class playerMovement : MonoBehaviour
 		else if(isClassroomScene)
 		{
 			camera.enabled = false;
-			audioListener.enabled = true;
+			audioListener.enabled = false;
 
 		}
 	}
