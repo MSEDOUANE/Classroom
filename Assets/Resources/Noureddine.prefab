@@ -3078,13 +3078,13 @@ GameObject:
   m_Component:
   - component: {fileID: 2624373831112454162}
   - component: {fileID: 1015477043974520983}
-  - component: {fileID: -6111896198959804757}
   - component: {fileID: 4819729451491211896}
   - component: {fileID: 2794367667451674897}
   - component: {fileID: 7685013544840155678}
   - component: {fileID: 7685013544840155672}
   - component: {fileID: 5660388101507932977}
   - component: {fileID: 2065800140402079794}
+  - component: {fileID: -6111896198959804757}
   - component: {fileID: -4351913607100910063}
   - component: {fileID: 5585668361589247523}
   m_Layer: 0
@@ -3144,23 +3144,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &-6111896198959804757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5466959308774882308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraOne: {fileID: 6786671397325968897}
-  cameraTwo: {fileID: 209630379025646731}
-  speed: 1
-  gravity: 20
-  rotSpeed: 80
 --- !u!114 &4819729451491211896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3261,6 +3244,23 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &-6111896198959804757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5466959308774882308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOne: {fileID: 6786671397325968897}
+  cameraTwo: {fileID: 209630379025646731}
+  speed: 1
+  gravity: 20
+  rotSpeed: 80
 --- !u!114 &-4351913607100910063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3301,19 +3301,19 @@ MonoBehaviour:
     SynchronizeType: 2
     Name: isTyping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isWriting
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isClapping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isStandClap
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isQueshada
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isThankful
   m_SynchronizeLayers:
   - SynchronizeType: 2
