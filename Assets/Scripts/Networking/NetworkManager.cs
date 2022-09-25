@@ -18,7 +18,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 	public static event Action OnPlayersChanged;
 
 	private const string Key = "CHAIR_INDEX";
-	private string room = "Meetup";
+	private string room = "MeetupV2";
 	private string gameVersion = "0.1";
 
 	private bool m_createdRoom = false;
