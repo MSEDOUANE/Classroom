@@ -7,9 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
+	
+
+	//camera
+	public GameObject cameraOne;
+	public GameObject cameraTwo;
+
+	AudioListener cameraOneAudioLis;
+	AudioListener cameraTwoAudioLis;
+
+
+//Moving
 	public float speed = 1f;
 	public float gravity = 20f;
-
 	CharacterController Controller;
 	Animator anim;
 	public float rotSpeed = 80f;
@@ -28,6 +38,16 @@ public class playerMovement : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		//camera
+		cameraOneAudioLis = cameraOne.GetComponent<AudioListener>();
+		cameraTwoAudioLis = cameraTwo.GetComponent<AudioListener>();
+		// cameraPositionChange(PlayerPrefs.GetInt("CameraPosition"));
+
+
+
+
+
+		//moving
 		Controller = GetComponent<CharacterController>();
 		anim = GetComponent<Animator>();
 		photonView = GetComponent<PhotonView>();
@@ -44,7 +64,9 @@ public class playerMovement : MonoBehaviour
 		}
 		else if(isClassroomScene)
 		{
-			camera.enabled = false;
+			cameraOne.SetActive(true);
+			cameraTwo.SetActive(false);
+			// camera.enabled = false;
 			audioListener.enabled = false;
 
 		}
@@ -53,6 +75,14 @@ public class playerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		//camera
+		switchCamera();
+
+
+
+
+
+		//Character animation
 		if (isClassroomScene && photonView.IsMine)
 		{
 			move();
@@ -62,6 +92,8 @@ public class playerMovement : MonoBehaviour
 				anim.SetBool("isSitting", false);
 				anim.SetBool("isTalking", false);
 				anim.SetBool("isStandClap", false);
+				anim.SetBool("isThankful", false);
+				anim.SetBool("isQueshada", false);
 			}
 			else if (Input.GetKey(KeyCode.T))
 			{
@@ -70,6 +102,15 @@ public class playerMovement : MonoBehaviour
 			else if (Input.GetKey(KeyCode.I))
 			{
 				anim.SetBool("isStandClap", true);
+			}
+			else if (Input.GetKey(KeyCode.Y))
+			{
+				anim.SetBool("isThankful", true);
+				// anim.SetBool("isThankful", false);
+			}
+			else if (Input.GetKey(KeyCode.E))
+			{
+				anim.SetBool("isQueshada", true);
 			}
 			else if (Input.GetKey(KeyCode.L))
 			{
@@ -101,7 +142,8 @@ public class playerMovement : MonoBehaviour
 			}
 			else if (Input.GetKey(KeyCode.C))
 			{
-				anim.SetBool("isClapping", true);
+				 anim.SetBool("isClapping", true);
+			
 			}
 		}
 	}
@@ -169,5 +211,51 @@ public class playerMovement : MonoBehaviour
 		else
 			return false;
 	}
+
+
+	public void switchCamera(){
+
+		if (Input.GetKeyDown(KeyCode.H)){
+			cameraChangeCounter();
+		}
+
+	}
+
+void cameraChangeCounter()
+{
+	int cameraPositionCounter = PlayerPrefs.GetInt("CameraPosition");
+	cameraPositionCounter++;
+	cameraPositionChange(cameraPositionCounter);
+
+}
+
+void cameraPositionChange(int camPosition)
+{
+
+	if( camPosition > 1){
+	 camPosition = 0;
+	}
+	
+	//Set camera position database
+	PlayerPrefs.SetInt("CameraPosition", camPosition );
+	
+	if(camPosition == 0){
+	cameraOne.SetActive(true);
+	// cameraOneAudioLis.enable = true;
+
+	//cameraTwoAudioLis.enable = false;
+	cameraTwo.SetActive(false);
+	}
+
+	if(camPosition == 1){
+	cameraTwo.SetActive(true);
+	//cameraTwoAudioLis.enable = true;
+
+	//cameraOneAudioLis.enable = false;
+	cameraOne.SetActive(false);
+	}
+
+}
+
 
 }
