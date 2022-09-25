@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4426,7 +4426,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &243078860223844396
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,6 +5403,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -5735,6 +5737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -5870,7 +5874,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &592443879431439734
 GameObject:
   m_ObjectHideFlags: 0
@@ -6325,7 +6329,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!137 &797681126286673413
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -7805,6 +7809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -8879,7 +8885,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &1356381757325316664
 GameObject:
   m_ObjectHideFlags: 0
@@ -9129,7 +9135,9 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2036380233462415458}
+  - {fileID: 4271455505305037947}
   sceneViewId: 9
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -9578,7 +9586,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &1493834599855493719
 GameObject:
   m_ObjectHideFlags: 0
@@ -13736,7 +13744,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &2514704157678996035
 GameObject:
   m_ObjectHideFlags: 0
@@ -14863,6 +14871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -16095,7 +16105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343652784060234593}
   m_LocalRotation: {x: -0.0000004921195, y: 0.8906983, z: -0.0000009303451, w: 0.4545949}
-  m_LocalPosition: {x: -3.323, y: 0, z: 0.211}
+  m_LocalPosition: {x: -3.325, y: -0.074, z: 0.147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18321,6 +18331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -19962,8 +19974,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isSitting
+  - Type: 4
+    SynchronizeType: 0
+    Name: isAsking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isTalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isfemaleSit
+  - Type: 4
+    SynchronizeType: 0
+    Name: isMaleSit
+  - Type: 4
+    SynchronizeType: 0
+    Name: isDrinking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isTyping
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWriting
+  - Type: 4
+    SynchronizeType: 0
+    Name: isClapping
+  - Type: 4
+    SynchronizeType: 0
+    Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!4 &4277857671045426075
 Transform:
   m_ObjectHideFlags: 0
@@ -21483,6 +21536,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -21893,6 +21948,12 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
@@ -22481,7 +22542,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!4 &5052522673024937178
 Transform:
   m_ObjectHideFlags: 0
@@ -23654,8 +23715,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isSitting
+  - Type: 4
+    SynchronizeType: 0
+    Name: isAsking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isTalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isfemaleSit
+  - Type: 4
+    SynchronizeType: 0
+    Name: isMaleSit
+  - Type: 4
+    SynchronizeType: 0
+    Name: isDrinking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isTyping
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWriting
+  - Type: 4
+    SynchronizeType: 0
+    Name: isClapping
+  - Type: 4
+    SynchronizeType: 0
+    Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!4 &5446930276393064005
 Transform:
   m_ObjectHideFlags: 0
@@ -25223,7 +25325,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 7309787093446562970}
   sceneViewId: 2
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -28858,6 +28961,12 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -29638,7 +29747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8964575937576362160}
   m_LocalRotation: {x: -0.00000074534347, y: 0.71632344, z: -0.00000074309173, w: 0.6977684}
-  m_LocalPosition: {x: -3.323, y: 0, z: 0.211}
+  m_LocalPosition: {x: -3.32, y: -0, z: 0.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30475,7 +30584,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &7177319712766648262
 GameObject:
   m_ObjectHideFlags: 0
@@ -30776,8 +30885,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isSitting
+  - Type: 4
+    SynchronizeType: 0
+    Name: isAsking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isTalking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isfemaleSit
+  - Type: 4
+    SynchronizeType: 0
+    Name: isMaleSit
+  - Type: 4
+    SynchronizeType: 0
+    Name: isDrinking
+  - Type: 4
+    SynchronizeType: 0
+    Name: isTyping
+  - Type: 4
+    SynchronizeType: 0
+    Name: isWriting
+  - Type: 4
+    SynchronizeType: 0
+    Name: isClapping
+  - Type: 4
+    SynchronizeType: 0
+    Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!1 &7317418869956163831
 GameObject:
   m_ObjectHideFlags: 0
@@ -32443,6 +32593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -32824,6 +32976,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -33659,6 +33813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d33b6bdf99cc0448d64cc722a7bdf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraOne: {fileID: 0}
+  cameraTwo: {fileID: 0}
   speed: 1
   gravity: 20
   rotSpeed: 80
@@ -34331,7 +34487,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!4 &8200660171903373940
 Transform:
   m_ObjectHideFlags: 0
@@ -35811,6 +35967,12 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -36540,6 +36702,12 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -36868,6 +37036,12 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 0
     Name: isStandClap
+  - Type: 4
+    SynchronizeType: 0
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 0
+    Name: isThankful
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
