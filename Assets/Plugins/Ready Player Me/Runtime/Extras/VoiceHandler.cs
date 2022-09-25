@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using System.Collections;
 using static ReadyPlayerMe.ExtensionMethods;
+using UnityEngine.SceneManagement;
 
 #if UNITY_ANDROID
 using UnityEngine.Android;
@@ -41,6 +42,7 @@ namespace ReadyPlayerMe
         public AudioClip AudioClip;
         public AudioSource AudioSource;
         public AudioProviderType AudioProvider = AudioProviderType.Microphone;
+        private bool isClassroomScene;
 
         private void Start()
         {
@@ -55,12 +57,18 @@ namespace ReadyPlayerMe
 #elif UNITY_STANDALONE || UNITY_EDITOR
             InitializeAudio();
 #endif
+
+            isClassroomScene = SceneManager.GetActiveScene().name == "SampleScene";
+
         }
 
         private void Update()
         {
-            var value = GetAmplitude();
-            SetBlendShapeWeights(value);
+            if (isClassroomScene)
+            {
+                var value = GetAmplitude();
+                SetBlendShapeWeights(value);
+            }
         }
 
         public void InitializeAudio()
