@@ -58,13 +58,14 @@ public class playerMovement : MonoBehaviour
 		AudioListener audioListener = this.GetComponentInChildren<AudioListener>(true);
 		if (isClassroomScene && photonView.IsMine)
 		{
-
-			camera.enabled = true;
+			//camera.enabled = true;
 			audioListener.enabled = true;
+			cameraOne.SetActive(true);
+			cameraTwo.SetActive(false);
 		}
 		else if(isClassroomScene)
 		{
-			cameraOne.SetActive(true);
+			cameraOne.SetActive(false);
 			cameraTwo.SetActive(false);
 			// camera.enabled = false;
 			audioListener.enabled = false;
@@ -75,9 +76,7 @@ public class playerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		//camera
-		switchCamera();
-
+	
 
 
 
@@ -86,6 +85,8 @@ public class playerMovement : MonoBehaviour
 		if (isClassroomScene && photonView.IsMine)
 		{
 			move();
+			//camera
+			switchCamera();
 
 			if (Input.GetKey(KeyCode.U))
 			{
