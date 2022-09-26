@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 4698168381372123047}
   - component: {fileID: 8864099494046284769}
   - component: {fileID: -6107992166652368978}
+  - component: {fileID: 8804321076950754927}
   m_Layer: 0
   m_Name: Salma
   m_TagString: Untagged
@@ -783,6 +784,18 @@ MonoBehaviour:
   AudioClip: {fileID: 0}
   AudioSource: {fileID: 0}
   AudioProvider: 0
+--- !u!114 &8804321076950754927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610539946518504404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2569fd4a87fc13744bf3fdfdf713aaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1799924463171221233
 GameObject:
   m_ObjectHideFlags: 0

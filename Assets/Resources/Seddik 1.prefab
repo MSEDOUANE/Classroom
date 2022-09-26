@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 8011509493954996433}
   - component: {fileID: -626646520677947309}
   - component: {fileID: 5238278761098619065}
+  - component: {fileID: 3857561109941198466}
   m_Layer: 0
   m_Name: Seddik 1
   m_TagString: Untagged
@@ -741,6 +742,18 @@ MonoBehaviour:
   AudioClip: {fileID: 0}
   AudioSource: {fileID: 0}
   AudioProvider: 0
+--- !u!114 &3857561109941198466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343652784448034833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2569fd4a87fc13744bf3fdfdf713aaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1494757052842149363
 GameObject:
   m_ObjectHideFlags: 0

@@ -2634,6 +2634,7 @@ GameObject:
   - component: {fileID: 3970990855073876331}
   - component: {fileID: 497977995044463506}
   - component: {fileID: 6785988780244483691}
+  - component: {fileID: 5386506802321622670}
   m_Layer: 0
   m_Name: Badreddine
   m_TagString: Untagged
@@ -2862,6 +2863,18 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &5386506802321622670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728378328642534617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2569fd4a87fc13744bf3fdfdf713aaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6745671085775541028
 GameObject:
   m_ObjectHideFlags: 0
