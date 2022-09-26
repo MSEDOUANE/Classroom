@@ -1219,7 +1219,6 @@ GameObject:
   - component: {fileID: 8344359413730298232}
   - component: {fileID: 301686057566611577}
   - component: {fileID: 1175445926451657634}
-  - component: {fileID: 2733314099024265626}
   - component: {fileID: 582982829147941221}
   - component: {fileID: 582982829147941222}
   - component: {fileID: 5554458590797815270}
@@ -1295,21 +1294,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blinkSpeed: 0.1
   blinkInterval: 3
---- !u!114 &2733314099024265626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3116484541041959269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf4ff6de4560d44d9b3b0697e00c1b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioClip: {fileID: 0}
-  AudioSource: {fileID: 0}
-  AudioProvider: 0
 --- !u!143 &582982829147941221
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1413,46 +1397,46 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isWalking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isSitting
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isAsking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isTalking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isfemaleSit
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isMaleSit
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isDrinking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isTyping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isWriting
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isClapping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isStandClap
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isQueshada
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isThankful
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 2
     LayerIndex: 0
 --- !u!114 &900017899607972527
 MonoBehaviour:

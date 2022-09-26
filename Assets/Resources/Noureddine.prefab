@@ -3086,7 +3086,6 @@ GameObject:
   - component: {fileID: 2065800140402079794}
   - component: {fileID: -6111896198959804757}
   - component: {fileID: -4351913607100910063}
-  - component: {fileID: 5585668361589247523}
   - component: {fileID: -2503690689605496046}
   m_Layer: 0
   m_Name: Noureddine
@@ -3319,25 +3318,6 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
---- !u!114 &5585668361589247523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5466959308774882308}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logLevel: 2
-  ignoreGlobalLogLevel: 0
-  recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 5170386798955703724}
-  AutoCreateRecorderIfNotFound: 1
-  UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 0
 --- !u!114 &-2503690689605496046
 MonoBehaviour:
   m_ObjectHideFlags: 0
