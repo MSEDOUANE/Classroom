@@ -489,7 +489,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &1375021482327449807
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +803,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &2410475195409703176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1115,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &2942042640467546429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1267,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &3081269903534045442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,7 +1707,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &4255542434476137358
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,12 +2273,84 @@ SkinnedMeshRenderer:
   - {fileID: 4860183110735323823}
   - {fileID: 8851726212133507457}
   - {fileID: 4320969359571459938}
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   m_RootBone: {fileID: 6385806571931558136}
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &5844374198928243631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,15 +2426,13 @@ GameObject:
   - component: {fileID: 7923174364659914956}
   - component: {fileID: 7016677599151505656}
   - component: {fileID: 4818873111172079617}
-  - component: {fileID: 8702519875771438625}
   - component: {fileID: 1110013164378542423}
   - component: {fileID: 1110013164378542420}
   - component: {fileID: -7832596471561494703}
   - component: {fileID: -7186991803701826501}
   - component: {fileID: 1110013164378542421}
   - component: {fileID: 4271455505513512994}
-  - component: {fileID: 8026561969203420104}
-  - component: {fileID: 1301134973186899394}
+  - component: {fileID: -6301638678080353604}
   m_Layer: 0
   m_Name: Yasser
   m_TagString: Untagged
@@ -2433,21 +2503,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blinkSpeed: 0.1
   blinkInterval: 3
---- !u!114 &8702519875771438625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6107982156597983404}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf4ff6de4560d44d9b3b0697e00c1b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioClip: {fileID: 0}
-  AudioSource: {fileID: 0}
-  AudioProvider: 0
 --- !u!143 &1110013164378542423
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2593,26 +2648,7 @@ MonoBehaviour:
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
---- !u!114 &8026561969203420104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6107982156597983404}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 126494ae2a10a34499272ed97a6c9f5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logLevel: 2
-  ignoreGlobalLogLevel: 0
-  recorderInUse: {fileID: 0}
-  speakerInUse: {fileID: 0}
-  AutoCreateRecorderIfNotFound: 0
-  UsePrimaryRecorder: 1
-  SetupDebugSpeaker: 0
---- !u!114 &1301134973186899394
+--- !u!114 &-6301638678080353604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2621,12 +2657,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6107982156597983404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3cc172bd1095d4e8bf76ae7949a400, type: 3}
+  m_Script: {fileID: 11500000, guid: 2569fd4a87fc13744bf3fdfdf713aaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioClip: {fileID: 0}
-  AudioSource: {fileID: 0}
-  AudioProvider: 0
 --- !u!1 &6172017196149830134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +3000,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &6599866288074745443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,7 +3152,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &6684373711853151062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,7 +3794,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &7501845285355651291
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,7 +4074,7 @@ SkinnedMeshRenderer:
   m_AABB:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+  m_DirtyAABB: 0
 --- !u!1 &7964471575593247352
 GameObject:
   m_ObjectHideFlags: 0

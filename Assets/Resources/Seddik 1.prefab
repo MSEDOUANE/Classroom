@@ -506,13 +506,13 @@ GameObject:
   - component: {fileID: 3198658602835608694}
   - component: {fileID: 2958792798490917557}
   - component: {fileID: 4737510351114265839}
-  - component: {fileID: 5615993272681541235}
   - component: {fileID: 8011509493954996438}
   - component: {fileID: 8011509493954996439}
   - component: {fileID: 4102801056563488510}
   - component: {fileID: 6211340367857146680}
   - component: {fileID: 8011509493954996433}
   - component: {fileID: -626646520677947309}
+  - component: {fileID: 5238278761098619065}
   m_Layer: 0
   m_Name: Seddik 1
   m_TagString: Untagged
@@ -582,21 +582,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blinkSpeed: 0.1
   blinkInterval: 3
---- !u!114 &5615993272681541235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343652784448034833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf4ff6de4560d44d9b3b0697e00c1b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AudioClip: {fileID: 8300000, guid: 7a66c846ebe6e5640b91bf67fd3ec991, type: 3}
-  AudioSource: {fileID: 0}
-  AudioProvider: 0
 --- !u!143 &8011509493954996438
 CharacterController:
   m_ObjectHideFlags: 0
@@ -698,8 +683,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowLayerWeightsInspector: 1
   ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 2
+    Name: isWalking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isSitting
+  - Type: 4
+    SynchronizeType: 2
+    Name: isAsking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isTalking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isfemaleSit
+  - Type: 4
+    SynchronizeType: 2
+    Name: isMaleSit
+  - Type: 4
+    SynchronizeType: 2
+    Name: isDrinking
+  - Type: 4
+    SynchronizeType: 2
+    Name: isTyping
+  - Type: 4
+    SynchronizeType: 2
+    Name: isWriting
+  - Type: 4
+    SynchronizeType: 2
+    Name: isClapping
+  - Type: 4
+    SynchronizeType: 2
+    Name: isStandClap
+  - Type: 4
+    SynchronizeType: 2
+    Name: isQueshada
+  - Type: 4
+    SynchronizeType: 2
+    Name: isThankful
+  m_SynchronizeLayers:
+  - SynchronizeType: 2
+    LayerIndex: 0
+--- !u!114 &5238278761098619065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343652784448034833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf4ff6de4560d44d9b3b0697e00c1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClip: {fileID: 0}
+  AudioSource: {fileID: 0}
+  AudioProvider: 0
 --- !u!1 &1494757052842149363
 GameObject:
   m_ObjectHideFlags: 0

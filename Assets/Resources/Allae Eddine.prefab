@@ -3883,46 +3883,46 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isWalking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isSitting
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isAsking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isTalking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isfemaleSit
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isMaleSit
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isDrinking
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isTyping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isWriting
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isClapping
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isStandClap
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isQueshada
   - Type: 4
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: isThankful
   m_SynchronizeLayers:
-  - SynchronizeType: 0
+  - SynchronizeType: 2
     LayerIndex: 0
 --- !u!1 &9153003771334078690
 GameObject:
