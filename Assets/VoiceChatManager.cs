@@ -58,29 +58,7 @@ public class VoiceChatManager : MonoBehaviourPunCallbacks
 		// set callbacks (optional)
 		rtcEngine.SetParameters("{\"rtc.log_filter\": 65535}");
 
-		if (!PhotonNetwork.IsMasterClient)
 
-		{    
-			int a = rtcEngine.EnableVideo();
-			int b = rtcEngine.EnableVideoObserver();
-			Debug.LogError(a);
-
-		}
-
-
-		if (PhotonNetwork.IsMasterClient)
-		{
-			GameObject gameObject = GameObject.Find("DisplayPlane");
-			if (ReferenceEquals(gameObject, null))
-			{
-				Debug.Log("Error: failed to find DisplayPlane");
-				return;
-			}
-			else
-			{
-				gameObject.AddComponent<VideoSurface>();
-			}
-		}
 
 
 		// join channel
@@ -143,13 +121,24 @@ public class VoiceChatManager : MonoBehaviourPunCallbacks
 	protected virtual void OnUserJoined(uint uid, int elapsed)
 	{
 		Debug.LogError("onUserJoined: uid = " + uid + " elapsed = " + elapsed);
-		if(!PhotonNetwork.IsMasterClient)
+		Debug.LogError("onUserJoined: uid = " + uid + " elapsed = " + elapsed);
+		string masterUid =string.Empty;
+
+		foreach (var item in PhotonNetwork.PlayerList)
+		{
+			if (item.IsMasterClient)
+			{
+				Debug.Log(item.CustomProperties["agoraID"]);
+				masterUid = item.CustomProperties["agoraID"].ToString();
+			}
+		}
+		if (!PhotonNetwork.IsMasterClient)
 		{       // configure videoSurface
 			GameObject quad = GameObject.Find("DisplayPlane");
 
 			VideoSurface videoSurface = quad.GetComponent<VideoSurface>();
 
-			videoSurface.SetForUser(uid);
+			videoSurface.SetForUser(uint.Parse(masterUid));
 			videoSurface.SetEnable(true);
 			videoSurface.SetVideoSurfaceType(AgoraVideoSurfaceType.Renderer);
 			videoSurface.SetGameFps(30);
@@ -280,6 +269,8 @@ public class VoiceChatManager : MonoBehaviourPunCallbacks
 
 	void ShareDisplayScreen()
 	{
+		int a = rtcEngine.EnableVideo();
+		int b = rtcEngine.EnableVideoObserver();
 
 		ScreenCaptureParameters sparams = new ScreenCaptureParameters
 		{
@@ -312,6 +303,26 @@ public class VoiceChatManager : MonoBehaviourPunCallbacks
 
 	public override void OnJoinedRoom()
 	{
+		if (!PhotonNetwork.IsMasterClient)
+		{
+			var share = GameObject.Find("ShareDisplayButton");
+			share.SetActive(false);
+		}
+
+
+		if (PhotonNetwork.IsMasterClient)
+		{
+			GameObject gameObject = GameObject.Find("DisplayPlane");
+			if (ReferenceEquals(gameObject, null))
+			{
+				Debug.Log("Error: failed to find DisplayPlane");
+				return;
+			}
+			else
+			{
+				gameObject.AddComponent<VideoSurface>();
+			}
+		}
 		rtcEngine.JoinChannel(PhotonNetwork.CurrentRoom.Name);
 	}
 

@@ -2,6 +2,7 @@ using Photon.Pun;
 using Photon.Voice.PUN;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -56,6 +57,9 @@ public class playerMovement : MonoBehaviour
 
 		Camera camera = this.GetComponentInChildren<Camera>(true);
 		AudioListener audioListener = this.GetComponentInChildren<AudioListener>(true);
+		var FocusCamera = GameObject.Find("FocusCamera");
+		FocusCamera.GetComponent<Camera>().enabled = false;
+
 		if (isClassroomScene && photonView.IsMine)
 		{
 			//camera.enabled = true;
@@ -87,7 +91,7 @@ public class playerMovement : MonoBehaviour
 			move();
 			//camera
 			switchCamera();
-
+			FocusCamera();
 			if (Input.GetKey(KeyCode.U))
 			{
 				anim.SetBool("isSitting", false);
@@ -260,6 +264,19 @@ public class playerMovement : MonoBehaviour
 			//cameraOneAudioLis.enable = false;
 			cameraOne.SetActive(false);
 		}
+
+	}
+
+	void FocusCamera()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			var FocusCamera = GameObject.Find("FocusCamera");
+			cameraOne.SetActive(FocusCamera.activeSelf);
+			cameraTwo.SetActive(FocusCamera.activeSelf);
+			FocusCamera.GetComponent<Camera>().enabled = !FocusCamera.GetComponent<Camera>().enabled;
+		}
+
 
 	}
 
