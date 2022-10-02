@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4206934379531038271}
   - component: {fileID: 4206934379531038268}
   - component: {fileID: 4206934379531038269}
+  - component: {fileID: -5010465573725619555}
   m_Layer: 0
   m_Name: ScreenCapturePrefab
   m_TagString: Untagged
@@ -110,6 +111,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62447bcc865b92458ed062e2833f880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTexture: {fileID: 2800000, guid: a6cb4f44c826fdf428c0545daaac01b8, type: 3}
   appId: b814293d74bb43d4bc2642f6fb8070b6
   channelName: MeetupV2
+--- !u!114 &-5010465573725619555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4206934379531038258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74b58e06bd21f4d628f59a13c4884efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMultiChannelWant: 0
+  _enableFlipHorizontal: 0
+  _enableFlipVertical: 0
+  videoFps: 30
+  VideoSurfaceType: 0

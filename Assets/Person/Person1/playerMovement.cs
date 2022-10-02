@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
-	
+
 
 	//camera
 	public GameObject cameraOne;
@@ -17,7 +17,7 @@ public class playerMovement : MonoBehaviour
 	AudioListener cameraTwoAudioLis;
 
 
-//Moving
+	//Moving
 	public float speed = 1f;
 	public float gravity = 20f;
 	CharacterController Controller;
@@ -63,7 +63,7 @@ public class playerMovement : MonoBehaviour
 			cameraOne.SetActive(true);
 			cameraTwo.SetActive(false);
 		}
-		else if(isClassroomScene)
+		else if (isClassroomScene)
 		{
 			cameraOne.SetActive(false);
 			cameraTwo.SetActive(false);
@@ -76,7 +76,7 @@ public class playerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-	
+
 
 
 
@@ -143,8 +143,8 @@ public class playerMovement : MonoBehaviour
 			}
 			else if (Input.GetKey(KeyCode.C))
 			{
-				 anim.SetBool("isClapping", true);
-			
+				anim.SetBool("isClapping", true);
+
 			}
 		}
 	}
@@ -214,49 +214,54 @@ public class playerMovement : MonoBehaviour
 	}
 
 
-	public void switchCamera(){
+	public void switchCamera()
+	{
 
-		if (Input.GetKeyDown(KeyCode.H)){
+		if (Input.GetKeyDown(KeyCode.H))
+		{
 			cameraChangeCounter();
 		}
 
 	}
 
-void cameraChangeCounter()
-{
-	int cameraPositionCounter = PlayerPrefs.GetInt("CameraPosition");
-	cameraPositionCounter++;
-	cameraPositionChange(cameraPositionCounter);
+	void cameraChangeCounter()
+	{
+		int cameraPositionCounter = PlayerPrefs.GetInt("CameraPosition");
+		cameraPositionCounter++;
+		cameraPositionChange(cameraPositionCounter);
 
-}
-
-void cameraPositionChange(int camPosition)
-{
-
-	if( camPosition > 1){
-	 camPosition = 0;
-	}
-	
-	//Set camera position database
-	PlayerPrefs.SetInt("CameraPosition", camPosition );
-	
-	if(camPosition == 0){
-	cameraOne.SetActive(true);
-	// cameraOneAudioLis.enable = true;
-
-	//cameraTwoAudioLis.enable = false;
-	cameraTwo.SetActive(false);
 	}
 
-	if(camPosition == 1){
-	cameraTwo.SetActive(true);
-	//cameraTwoAudioLis.enable = true;
+	void cameraPositionChange(int camPosition)
+	{
 
-	//cameraOneAudioLis.enable = false;
-	cameraOne.SetActive(false);
+		if (camPosition > 1)
+		{
+			camPosition = 0;
+		}
+
+		//Set camera position database
+		PlayerPrefs.SetInt("CameraPosition", camPosition);
+
+		if (camPosition == 0)
+		{
+			cameraOne.SetActive(true);
+			// cameraOneAudioLis.enable = true;
+
+			//cameraTwoAudioLis.enable = false;
+			cameraTwo.SetActive(false);
+		}
+
+		if (camPosition == 1)
+		{
+			cameraTwo.SetActive(true);
+			//cameraTwoAudioLis.enable = true;
+
+			//cameraOneAudioLis.enable = false;
+			cameraOne.SetActive(false);
+		}
+
 	}
-
-}
 
 
 }

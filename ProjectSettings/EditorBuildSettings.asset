@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Photon/PhotonVoice/Demos/DemoVoicePun/DemoVoicePun-Scene.unity
     guid: a3f3c3b3816924199acba595045624d2
+  - enabled: 0
+    path: Assets/AgoraEngine/Demo/SceneHome.unity
+    guid: 11e44933caff747879b06a78a609ddfe
+  - enabled: 0
+    path: Assets/AgoraEngine/Demo/SceneHelloVideo.unity
+    guid: 38239e0a3e78848d8a1e3b083920e199
   m_configObjects: {}

@@ -32,7 +32,7 @@ public class VoiceHandlerV2 : MonoBehaviour
 
 	private void Update()
 	{
-
+		
 	}
 
 	[PunRPC]
@@ -48,6 +48,22 @@ public class VoiceHandlerV2 : MonoBehaviour
 
 		SetBlendShapeWeights(b);
 	}
+
+	[PunRPC]
+	void RenderDesktop(Byte[] texture,int width,int height,int format,int mipmapCount, PhotonMessageInfo info)
+	{
+		if(!PhotonNetwork.IsMasterClient)
+		{
+			Texture2D texCopy = new Texture2D(width, height, (TextureFormat)format, mipmapCount > 1);
+			texCopy.LoadRawTextureData(texture);
+			texCopy.Apply();
+			GameObject rec = GameObject.FindGameObjectWithTag("Receiver");
+			rec.GetComponent<MeshRenderer>().material.mainTexture = texCopy;
+		}
+
+
+	}
+
 	private void SetBlendShapeWeights(float weight)
 	{
 		SetBlendShapeWeight(headMesh, mouthOpenBlendShapeIndexOnHeadMesh);
@@ -56,8 +72,6 @@ public class VoiceHandlerV2 : MonoBehaviour
 
 		void SetBlendShapeWeight(SkinnedMeshRenderer mesh, int index)
 		{
-			Debug.LogError("index :" + index);
-
 			if (index >= 0)
 			{
 				mesh.SetBlendShapeWeight(index, weight);

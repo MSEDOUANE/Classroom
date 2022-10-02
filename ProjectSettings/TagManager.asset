@@ -7,6 +7,8 @@ TagManager:
   - chair
   - Bullet
   - Teacher chair
+  - Receiver
+  - Sender
   layers:
   - Default
   - TransparentFX
